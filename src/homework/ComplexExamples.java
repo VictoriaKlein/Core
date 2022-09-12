@@ -2,7 +2,6 @@ package homework;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class ComplexExamples {
 
@@ -73,8 +72,7 @@ public class ComplexExamples {
         **************************************************
        */
 
-    public Map<String,Long> filterData (){
-            /*
+    public Map<String,Long> filterData (){            /*
               Убрать дубликаты, отсортировать по идентификатору, сгруппировать по имени
               Что должно получиться
                   Key:Amelia
@@ -86,18 +84,7 @@ public class ComplexExamples {
                   Key: Jack
                   Value:1
            */
-//        Map<String, List<Person>> filteredData = Arrays.stream(RAW_DATA)
-//                .filter(Objects::nonNull) //person shouldn't be null
-//                .filter(p -> Objects.nonNull(p.getName())) //people names shouldn't be null
-//                .distinct()
-//                .sorted(Comparator.comparing(Person::getId))
-//                .collect(Collectors.groupingBy(Person::getName));
-//
-//        filteredData.forEach((name, people) -> {
-//            System.out.println(name + ":");
-//            people.forEach(p -> System.out.println(p.getName() + "(" + p.getId() + ")"));
-//            System.out.println();
-//        });
+
         Map<String, Long> filteredData = Arrays.stream(RAW_DATA)
                 .filter(Objects::nonNull)//person shouldn't be null
                 .filter(p -> Objects.nonNull(p.getName()))//people names shouldn't be null
